@@ -31,6 +31,8 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
+app.get('/add_student', dashboard.add_student);
+app.post('/add_student_post', dashboard.add_student_post);
 
 
 http.createServer(app).listen(app.get('port'), function(){
